@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+nav {
+  z-index: 3;
+}
+
+header {
+  z-index: 2;
+}
+
+#nav-bg {
+  z-index: 1;
+}
+
+body {
+  background: #eee;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  /*bottom: 0;*/
+}
+
+header {
+  position: relative;
+  background-color: black;
+  padding: 1em;
+  height: 100vh;
+}
+header:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /*background-image: url("https://cdn.shopify.com/s/files/1/0678/8333/files/BRCC_Desktops_0000_GRAYonBLK_5760x.jpg?v=1536616485");
+  background-image: url("https://cdn.shopify.com/s/files/1/0678/8333/files/BRCC_Desktops_0004_COFFEE_Exp_5760x.jpg?v=1536616374");
+  background-image: url("https://cdn.shopify.com/s/files/1/0678/8333/files/BRCC_DESKTOP_R2_0014_holiday18_5760x.jpg?v=1545069271");*/
+  background-image: url("../img/symbol_of_hope-The_the_Avengers_2012_HD_Wallpapers_1366x768.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 65% 50%;
+  opacity: 0.4;
+}
+
+#nav-bg {
+  background: #090909;
+  position: fixed;
+  height: 83px;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 4em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 800;
+  padding-top: 30vh;
+}
+header p {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 200;
+}
+
+#sobre {
+  background: #eee;
+  height: 70em;
+  padding: 5em 0;
+}
+
+.imagemComTexto {
+  text-align: center;
+  padding: 10px;
+}
+.imagemComTexto figure {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+  background: #fff;
+  border: 1px solid #fff;
+  font-size: 0;
+  overflow: hidden;
+}
+.imagemComTexto figure figcaption {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  max-height: 100%;
+  padding: 15px;
+  text-align: left;
+  font-size: 1rem;
+  opacity: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.imagemComTexto figure figcaption::-webkit-scrollbar {
+  width: 4px;
+}
+.imagemComTexto figure figcaption::-webkit-scrollbar-track {
+  background: transparent;
+}
+.imagemComTexto figure figcaption::-webkit-scrollbar-thumb {
+  background: #bbb;
+}
+.imagemComTexto figure figcaption::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+.imagemComTexto figure img {
+  max-width: 100%;
+}
+.imagemComTexto figure:hover figcaption {
+  opacity: 1;
+}
+.imagemComTexto figure:hover img {
+  -webkit-filter: blur(20px) saturate(1) opacity(.85);
+  filter: blur(20px) saturate(1) opacity(.85);
+}
+
+body.ie .imagemComTexto figure:hover::after {
+  content: '';
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+body.ie .imagemComTexto figure:hover figcaption {
+  z-index: 2;
+  color: #fff;
+}

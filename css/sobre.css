@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+div#div-final {
+    background-color: gainsboro;
+}
+
+.bloco-historia {
+    width: 90%;
+    margin-left: 5%;
+    padding: 20px;
+}

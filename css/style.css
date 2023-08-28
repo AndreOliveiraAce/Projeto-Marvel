@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+p {
+    text-align: justify;
+    font-family: Signika, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Signika, sans-serif;
+    font-weight: 600;
+}
+
+.social-icons {
+    background-color: #f6b519;
+    padding: 15px;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+}
+
+.aBranco {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.preto-preto {
+    background-color: #090909;
+}
+.pretoclaro {
+    background-color: #161415;
+}
+
+.amarelo {
+    background-color: #f6b519;
+}
+
+.amarelo-texto {
+    color: #f6b519;
+}
+
+.amarelo-estrela {
+    color: #ffc400;
+}
+
+.quase-preto-texto{
+   color: #989898;
+}
+
+.background-masker {
+    background-color: #fff;
+    position: absolute;
+}
+
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -400px 0
+    }
+    100% {
+        background-position: 400px 0
+    }
+}
+
+.animated-background {
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #bbbbbb 18%, #eeeeee 33%);
+    background-size: 100%;
+    min-height: 10px;
+    position: relative;
+}
+
+.active {
+    background-color: #f6b519 !important;
+}
+
+.amarelo:hover {
+    background-color: #f89100 !important;
+}
+
+
